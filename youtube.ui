@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>591</width>
-    <height>527</height>
+    <width>975</width>
+    <height>505</height>
    </rect>
   </property>
   <property name="font">
@@ -29,7 +29,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(60, 60, 60);
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(236, 255, 45, 255), stop:1 rgba(255, 255, 160, 255));
 color:  rgb(155, 155, 155);
 border-radius: 5%;
 font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
@@ -41,8 +41,8 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QToolButton" name="placeHolderChoice">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>180</y>
+      <x>930</x>
+      <y>60</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -53,7 +53,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
     <property name="styleSheet">
      <string notr="true">QToolButton {
 	background-color: rgb(80, 80, 80);
-	color:  rgb(125, 125, 125);
+	color:  rgb(255, 255, 0);
 	border-radius: 5%;
 }
 
@@ -71,10 +71,10 @@ QToolButton:hover {
    <widget class="QPushButton" name="downloadAudio">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>430</y>
-      <width>491</width>
-      <height>41</height>
+      <x>780</x>
+      <y>360</y>
+      <width>181</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="font">
@@ -93,7 +93,7 @@ QToolButton:hover {
      <string notr="true">QPushButton {
 	background-color: rgb(80, 80, 80);
 	font: 75 12pt &quot;MS Shell Dlg 2&quot;;
-	color:  rgb(155, 155, 155);
+	color:  rgb(255, 255, 0);
 	border-radius: 5%;
 }
 
@@ -115,10 +115,10 @@ QPushButton:hover {
     </property>
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>370</y>
-      <width>491</width>
-      <height>41</height>
+      <x>780</x>
+      <y>270</y>
+      <width>181</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="font">
@@ -140,7 +140,7 @@ QPushButton:hover {
      <string notr="true">QPushButton {
 	background-color: rgb(80, 80, 80);
 	font: 75 12pt &quot;MS Shell Dlg 2&quot;;
-	color:  rgb(155, 155, 155);
+	color:  rgb(255, 255, 0);
 	border-radius: 5%;
 }
 
@@ -159,18 +159,19 @@ QPushButton:hover {
    <widget class="QTextBrowser" name="placeHolder">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>180</y>
-      <width>451</width>
+      <x>540</x>
+      <y>60</y>
+      <width>381</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QTextBrowser {
 	background-color: rgb(80, 80, 80);
-	color:  rgb(155, 155, 155);
+	color:  rgb(255, 255, 0);
 	border-radius: 5%;
-	font: 10pt &quot;MS Shell Dlg 2&quot;;
+	font: 8pt &quot;MS Shell Dlg 2&quot;;
+	text-align: center;
 	padding-top: 2px;
 }
 
@@ -180,8 +181,8 @@ QPushButton:hover {
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Вкажіть шлях, де зберегти файл&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Вкажіть шлях, де зберегти файл&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="linkYouTube">
@@ -190,16 +191,16 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>120</y>
-      <width>491</width>
+      <x>540</x>
+      <y>10</y>
+      <width>421</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>MS Shell Dlg 2</family>
-      <pointsize>12</pointsize>
+      <pointsize>10</pointsize>
       <weight>9</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -214,14 +215,14 @@ p, li { white-space: pre-wrap; }
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: rgb(80, 80, 80);
-	font: 75 12pt &quot;MS Shell Dlg 2&quot;;
-	color:  rgb(155, 155, 155);
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(255, 255, 0);
 	border-radius: 5%;
 }
 
 QPushButton:hover {
 	background-color: rgb(120, 120, 120);
-	font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+	font: 75 10pt &quot;MS Shell Dlg 2&quot;;
 	color:  rgb(255, 255, 255);
 	border-radius: 5%;
 	transition: all 0.3s ease 0s;
@@ -234,55 +235,29 @@ QPushButton:hover {
    <widget class="QLabel" name="labelLogo">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>20</y>
-      <width>71</width>
-      <height>51</height>
+      <x>30</x>
+      <y>10</y>
+      <width>81</width>
+      <height>81</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));</string>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>YTDlogo.png</pixmap>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelText">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>20</y>
-      <width>411</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>MS Shell Dlg 2</family>
-      <pointsize>18</pointsize>
-      <weight>9</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel {
-	font: 75 18pt &quot;MS Shell Dlg 2&quot;;
-	color: rgb(255, 255, 255);
-}
-</string>
-    </property>
-    <property name="text">
-     <string>YouTube Downloader</string>
+     <pixmap>../../../Downloads/ytlogo2.png</pixmap>
     </property>
    </widget>
    <widget class="QProgressBar" name="progressBar">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>270</y>
-      <width>491</width>
-      <height>31</height>
+      <x>40</x>
+      <y>440</y>
+      <width>711</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
@@ -340,19 +315,75 @@ QProgressBar::chunk {
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>310</y>
-      <width>491</width>
-      <height>16</height>
+      <x>40</x>
+      <y>460</y>
+      <width>711</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));</string>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>731</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../Downloads/boombox3-removebg-preview.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>20</y>
+      <width>351</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ink Free</family>
+      <pointsize>24</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));
+font: 24pt &quot;Ink Free&quot;;</string>
+    </property>
+    <property name="text">
+     <string>YouTube Downloader</string>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>placeHolderChoice</zorder>
+   <zorder>downloadAudio</zorder>
+   <zorder>downloadVideo</zorder>
+   <zorder>placeHolder</zorder>
+   <zorder>linkYouTube</zorder>
+   <zorder>labelLogo</zorder>
+   <zorder>progressBar</zorder>
+   <zorder>lineEdit</zorder>
+   <zorder>label_2</zorder>
   </widget>
  </widget>
  <resources/>

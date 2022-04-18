@@ -1,5 +1,6 @@
 # pyuic5 youtube.ui -o youtube.py
 # auto-py-to-exe
+# MainWindow.setWindowIcon(QtGui.QIcon('YTDicon.png'))
 
 import os
 import sys
@@ -133,6 +134,7 @@ class GUI(QtWidgets.QMainWindow):
         elif info_status == 'stop':
             self.ui.lineEdit.clear()
             self.ui.progressBar.reset()
+            self.ui.progressBar.hide()
             self.lock_buttons(False)
         elif info_status == 'error':
             self.ui.lineEdit.setText('Некоректне посилання')
