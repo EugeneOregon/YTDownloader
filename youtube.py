@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(975, 505)
+        MainWindow.resize(755, 374)
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(12)
@@ -24,98 +24,51 @@ class Ui_MainWindow(object):
         MainWindow.setFont(font)
         MainWindow.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         MainWindow.setAutoFillBackground(False)
-        MainWindow.setStyleSheet(
-            "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(236, 255, 45, 255), stop:1 rgba(255, 255, 160, 255));\n"
-            "color:  rgb(155, 155, 155);\n"
-            "border-radius: 5%;\n"
-            "font: 12pt \"MS Shell Dlg 2\";")
+        MainWindow.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(236, 255, 45, 255), stop:1 rgba(255, 255, 160, 255));\n"
+"color:  rgb(155, 155, 155);\n"
+"border-radius: 5%;\n"
+"font: 12pt \"MS Shell Dlg 2\";")
         MainWindow.setLocale(QtCore.QLocale(QtCore.QLocale.Ukrainian, QtCore.QLocale.Ukraine))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.placeHolderChoice = QtWidgets.QToolButton(self.centralwidget)
-        self.placeHolderChoice.setGeometry(QtCore.QRect(930, 60, 31, 31))
-        self.placeHolderChoice.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.placeHolderChoice.setStyleSheet("QToolButton {\n"
-                                             "    background-color: rgb(80, 80, 80);\n"
-                                             "    color:  rgb(255, 255, 0);\n"
-                                             "    border-radius: 5%;\n"
-                                             "}\n"
-                                             "\n"
-                                             "QToolButton:hover {\n"
-                                             "    background-color: rgb(120, 120, 120);\n"
-                                             "    color:  rgb(255, 255, 255);\n"
-                                             "    border-radius: 5%;\n"
-                                             "    transition: all 0.3s ease 0s;\n"
-                                             "}")
-        self.placeHolderChoice.setObjectName("placeHolderChoice")
-        self.downloadAudio = QtWidgets.QPushButton(self.centralwidget)
-        self.downloadAudio.setGeometry(QtCore.QRect(780, 360, 181, 71))
+        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
+        self.gridLayout.setObjectName("gridLayout")
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.labelLogo = QtWidgets.QLabel(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.labelLogo.sizePolicy().hasHeightForWidth())
+        self.labelLogo.setSizePolicy(sizePolicy)
+        self.labelLogo.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));")
+        self.labelLogo.setText("")
+        self.labelLogo.setPixmap(QtGui.QPixmap("ytlogo.png"))
+        self.labelLogo.setObjectName("labelLogo")
+        self.horizontalLayout.addWidget(self.labelLogo)
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
-        font.setFamily("MS Shell Dlg 2")
-        font.setPointSize(12)
+        font.setFamily("Ink Free")
+        font.setPointSize(24)
         font.setBold(False)
         font.setItalic(False)
-        font.setWeight(9)
-        self.downloadAudio.setFont(font)
-        self.downloadAudio.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.downloadAudio.setStyleSheet("QPushButton {\n"
-                                         "    background-color: rgb(80, 80, 80);\n"
-                                         "    font: 75 12pt \"MS Shell Dlg 2\";\n"
-                                         "    color:  rgb(255, 255, 0);\n"
-                                         "    border-radius: 5%;\n"
-                                         "}\n"
-                                         "\n"
-                                         "QPushButton:hover {\n"
-                                         "    background-color: rgb(120, 120, 120);\n"
-                                         "    font: 75 12pt \"MS Shell Dlg 2\";\n"
-                                         "    color:  rgb(255, 255, 255);\n"
-                                         "    border-radius: 5%;\n"
-                                         "    transition: all 0.3s ease 0s;\n"
-                                         "}")
-        self.downloadAudio.setObjectName("downloadAudio")
-        self.downloadVideo = QtWidgets.QPushButton(self.centralwidget)
-        self.downloadVideo.setEnabled(True)
-        self.downloadVideo.setGeometry(QtCore.QRect(780, 270, 181, 71))
-        font = QtGui.QFont()
-        font.setFamily("MS Shell Dlg 2")
-        font.setPointSize(12)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(9)
-        self.downloadVideo.setFont(font)
-        self.downloadVideo.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.downloadVideo.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.downloadVideo.setStyleSheet("QPushButton {\n"
-                                         "    background-color: rgb(80, 80, 80);\n"
-                                         "    font: 75 12pt \"MS Shell Dlg 2\";\n"
-                                         "    color:  rgb(255, 255, 0);\n"
-                                         "    border-radius: 5%;\n"
-                                         "}\n"
-                                         "\n"
-                                         "QPushButton:hover {\n"
-                                         "    background-color: rgb(120, 120, 120);\n"
-                                         "    font: 75 12pt \"MS Shell Dlg 2\";\n"
-                                         "    color:  rgb(255, 255, 255);\n"
-                                         "    border-radius: 5%;\n"
-                                         "    transition: all 0.3s ease 0s;\n"
-                                         "}")
-        self.downloadVideo.setObjectName("downloadVideo")
-        self.placeHolder = QtWidgets.QTextBrowser(self.centralwidget)
-        self.placeHolder.setGeometry(QtCore.QRect(540, 60, 381, 31))
-        self.placeHolder.setStyleSheet("QTextBrowser {\n"
-                                       "    background-color: rgb(80, 80, 80);\n"
-                                       "    color:  rgb(255, 255, 0);\n"
-                                       "    border-radius: 5%;\n"
-                                       "    font: 8pt \"MS Shell Dlg 2\";\n"
-                                       "    text-align: center;\n"
-                                       "    padding-top: 2px;\n"
-                                       "}\n"
-                                       "\n"
-                                       "")
-        self.placeHolder.setObjectName("placeHolder")
+        font.setWeight(50)
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));\n"
+"font: 24pt \"Ink Free\";")
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout.addWidget(self.label_2)
+        self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 1)
+        self.verticalLayout = QtWidgets.QVBoxLayout()
+        self.verticalLayout.setContentsMargins(20, -1, -1, -1)
+        self.verticalLayout.setObjectName("verticalLayout")
         self.linkYouTube = QtWidgets.QPushButton(self.centralwidget)
         self.linkYouTube.setEnabled(True)
-        self.linkYouTube.setGeometry(QtCore.QRect(540, 10, 421, 41))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.linkYouTube.sizePolicy().hasHeightForWidth())
+        self.linkYouTube.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
@@ -126,29 +79,154 @@ class Ui_MainWindow(object):
         self.linkYouTube.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.linkYouTube.setFocusPolicy(QtCore.Qt.NoFocus)
         self.linkYouTube.setStyleSheet("QPushButton {\n"
-                                       "    background-color: rgb(80, 80, 80);\n"
-                                       "    font: 75 10pt \"MS Shell Dlg 2\";\n"
-                                       "    color: rgb(255, 255, 0);\n"
-                                       "    border-radius: 5%;\n"
-                                       "}\n"
-                                       "\n"
-                                       "QPushButton:hover {\n"
-                                       "    background-color: rgb(120, 120, 120);\n"
-                                       "    font: 75 10pt \"MS Shell Dlg 2\";\n"
-                                       "    color:  rgb(255, 255, 255);\n"
-                                       "    border-radius: 5%;\n"
-                                       "    transition: all 0.3s ease 0s;\n"
-                                       "}")
+"    background-color: rgb(80, 80, 80);\n"
+"    font: 75 10pt \"MS Shell Dlg 2\";\n"
+"    color: rgb(255, 255, 0);\n"
+"    border-radius: 5%;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(120, 120, 120);\n"
+"    font: 75 10pt \"MS Shell Dlg 2\";\n"
+"    color:  rgb(255, 255, 255);\n"
+"    border-radius: 5%;\n"
+"    transition: all 0.3s ease 0s;\n"
+"}")
         self.linkYouTube.setObjectName("linkYouTube")
-        self.labelLogo = QtWidgets.QLabel(self.centralwidget)
-        self.labelLogo.setGeometry(QtCore.QRect(30, 10, 81, 81))
-        self.labelLogo.setStyleSheet(
-            "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));")
-        self.labelLogo.setText("")
-        self.labelLogo.setPixmap(QtGui.QPixmap("ytlogo.png"))
-        self.labelLogo.setObjectName("labelLogo")
+        self.verticalLayout.addWidget(self.linkYouTube)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setContentsMargins(0, 0, -1, -1)
+        self.horizontalLayout_2.setSpacing(4)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEdit_2.sizePolicy().hasHeightForWidth())
+        self.lineEdit_2.setSizePolicy(sizePolicy)
+        self.lineEdit_2.setStyleSheet("QLineEdit {\n"
+"    background-color: rgb(80, 80, 80);\n"
+"    color:  rgb(255, 255, 0);\n"
+"    border-radius: 5%;\n"
+"    font: 8pt \"MS Shell Dlg 2\";\n"
+"    text-align: center;\n"
+"    padding-top: 2px;\n"
+"}")
+        self.lineEdit_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.horizontalLayout_2.addWidget(self.lineEdit_2)
+        self.placeHolderChoice = QtWidgets.QToolButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.placeHolderChoice.sizePolicy().hasHeightForWidth())
+        self.placeHolderChoice.setSizePolicy(sizePolicy)
+        self.placeHolderChoice.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.placeHolderChoice.setStyleSheet("QToolButton {\n"
+"    background-color: rgb(80, 80, 80);\n"
+"    color:  rgb(255, 255, 0);\n"
+"    border-radius: 5%;\n"
+"}\n"
+"\n"
+"QToolButton:hover {\n"
+"    background-color: rgb(120, 120, 120);\n"
+"    color:  rgb(255, 255, 255);\n"
+"    border-radius: 5%;\n"
+"    transition: all 0.3s ease 0s;\n"
+"}")
+        self.placeHolderChoice.setObjectName("placeHolderChoice")
+        self.horizontalLayout_2.addWidget(self.placeHolderChoice)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem)
+        self.downloadVideo = QtWidgets.QPushButton(self.centralwidget)
+        self.downloadVideo.setEnabled(True)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.downloadVideo.sizePolicy().hasHeightForWidth())
+        self.downloadVideo.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.downloadVideo.setFont(font)
+        self.downloadVideo.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.downloadVideo.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.downloadVideo.setStyleSheet("QPushButton {\n"
+"    background-color: rgb(80, 80, 80);\n"
+"    font: 75 12pt \"MS Shell Dlg 2\";\n"
+"    color:  rgb(255, 255, 0);\n"
+"    border-radius: 5%;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(120, 120, 120);\n"
+"    font: 75 12pt \"MS Shell Dlg 2\";\n"
+"    color:  rgb(255, 255, 255);\n"
+"    border-radius: 5%;\n"
+"    transition: all 0.3s ease 0s;\n"
+"}")
+        self.downloadVideo.setObjectName("downloadVideo")
+        self.verticalLayout.addWidget(self.downloadVideo)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem1)
+        self.downloadAudio = QtWidgets.QPushButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.downloadAudio.sizePolicy().hasHeightForWidth())
+        self.downloadAudio.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.downloadAudio.setFont(font)
+        self.downloadAudio.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.downloadAudio.setStyleSheet("QPushButton {\n"
+"    background-color: rgb(80, 80, 80);\n"
+"    font: 75 12pt \"MS Shell Dlg 2\";\n"
+"    color:  rgb(255, 255, 0);\n"
+"    border-radius: 5%;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(120, 120, 120);\n"
+"    font: 75 12pt \"MS Shell Dlg 2\";\n"
+"    color:  rgb(255, 255, 255);\n"
+"    border-radius: 5%;\n"
+"    transition: all 0.3s ease 0s;\n"
+"}")
+        self.downloadAudio.setObjectName("downloadAudio")
+        self.verticalLayout.addWidget(self.downloadAudio)
+        self.verticalLayout.setStretch(0, 3)
+        self.verticalLayout.setStretch(3, 3)
+        self.verticalLayout.setStretch(5, 3)
+        self.gridLayout.addLayout(self.verticalLayout, 0, 1, 2, 1)
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
+        self.label.setSizePolicy(sizePolicy)
+        self.label.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));")
+        self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap("boombox1.png"))
+        self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 1, 0, 1, 1)
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_2.setContentsMargins(-1, 20, -1, -1)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
-        self.progressBar.setGeometry(QtCore.QRect(40, 440, 711, 21))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Maximum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.progressBar.sizePolicy().hasHeightForWidth())
+        self.progressBar.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(10)
@@ -162,59 +240,36 @@ class Ui_MainWindow(object):
         self.progressBar.setToolTipDuration(-1)
         self.progressBar.setAutoFillBackground(False)
         self.progressBar.setStyleSheet("QProgressBar {\n"
-                                       "    background-color: rgb(90, 90, 90);\n"
-                                       "    font: 75 10pt \"MS Shell Dlg 2\";\n"
-                                       "    color: white;\n"
-                                       "    border-radius: 5%;\n"
-                                       "    text-align: center;\n"
-                                       "}\n"
-                                       "\n"
-                                       "QProgressBar::chunk {\n"
-                                       "    background-color: ;\n"
-                                       "    background-color:qlineargradient(spread:pad, x1:0.136, y1:0.0905455, x2:0.966, y2:0.0625, stop:0 rgba(108, 255, 168, 245), stop:0.943182 rgba(0, 212, 41, 241));\n"
-                                       "    border-radius: 5%;\n"
-                                       "}")
+"    background-color: rgb(90, 90, 90);\n"
+"    font: 75 10pt \"MS Shell Dlg 2\";\n"
+"    color: white;\n"
+"    border-radius: 5%;\n"
+"    text-align: center;\n"
+"}\n"
+"\n"
+"QProgressBar::chunk {\n"
+"    background-color: ;\n"
+"    background-color:qlineargradient(spread:pad, x1:0.136, y1:0.0905455, x2:0.966, y2:0.0625, stop:0 rgba(108, 255, 168, 245), stop:0.943182 rgba(0, 212, 41, 241));\n"
+"    border-radius: 5%;\n"
+"}")
         self.progressBar.setProperty("value", 24)
         self.progressBar.setTextVisible(True)
         self.progressBar.setInvertedAppearance(False)
         self.progressBar.setTextDirection(QtWidgets.QProgressBar.TopToBottom)
         self.progressBar.setObjectName("progressBar")
+        self.verticalLayout_2.addWidget(self.progressBar)
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit.setGeometry(QtCore.QRect(40, 460, 711, 20))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Maximum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEdit.sizePolicy().hasHeightForWidth())
+        self.lineEdit.setSizePolicy(sizePolicy)
         self.lineEdit.setStyleSheet("font: 75 10pt \"MS Shell Dlg 2\";\n"
-                                    "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));")
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));")
         self.lineEdit.setText("")
         self.lineEdit.setObjectName("lineEdit")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(20, 120, 731, 321))
-        self.label.setStyleSheet(
-            "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));")
-        self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("boombox.png"))
-        self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(110, 20, 351, 61))
-        font = QtGui.QFont()
-        font.setFamily("Ink Free")
-        font.setPointSize(24)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.label_2.setFont(font)
-        self.label_2.setStyleSheet(
-            "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));\n"
-            "font: 24pt \"Ink Free\";")
-        self.label_2.setObjectName("label_2")
-        self.label.raise_()
-        self.placeHolderChoice.raise_()
-        self.downloadAudio.raise_()
-        self.downloadVideo.raise_()
-        self.placeHolder.raise_()
-        self.linkYouTube.raise_()
-        self.labelLogo.raise_()
-        self.progressBar.raise_()
-        self.lineEdit.raise_()
-        self.label_2.raise_()
+        self.verticalLayout_2.addWidget(self.lineEdit)
+        self.gridLayout.addLayout(self.verticalLayout_2, 2, 0, 1, 2)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -222,16 +277,10 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "YouTube Downloader"))
-        MainWindow.setWindowIcon(QtGui.QIcon('YTDicon.png'))
-        self.placeHolderChoice.setText(_translate("MainWindow", "..."))
-        self.downloadAudio.setText(_translate("MainWindow", "Завантажити Аудіо"))
-        self.downloadVideo.setText(_translate("MainWindow", "Завантажити Відео"))
-        self.placeHolder.setHtml(_translate("MainWindow",
-                                            "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-                                            "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-                                            "p, li { white-space: pre-wrap; }\n"
-                                            "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-                                            "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Вкажіть шлях, де зберегти файл</p></body></html>"))
-        self.linkYouTube.setText(_translate("MainWindow", "Вказати посилання для завантаження"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_2.setText(_translate("MainWindow", "YouTube Downloader"))
+        self.linkYouTube.setText(_translate("MainWindow", "Вказати посилання для завантаження"))
+        self.lineEdit_2.setText(_translate("MainWindow", "Вкажіть шлях, де зберегти файл"))
+        self.placeHolderChoice.setText(_translate("MainWindow", "..."))
+        self.downloadVideo.setText(_translate("MainWindow", "Завантажити Відео"))
+        self.downloadAudio.setText(_translate("MainWindow", "Завантажити Аудіо"))
